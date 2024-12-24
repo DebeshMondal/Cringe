@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f79dff, #5d54ff);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  .glow-text {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 0 0 10px #ff47e1, 0 0 20px #ff47e1, 0 0 30px #ff47e1;
+    margin-bottom: 20px;
+  }
+  
+  .message {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .animation-area {
+    position: relative;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .heart {
+    width: 30px;
+    height: 30px;
+    background: #ff477e;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    animation: float 3s infinite;
+    opacity: 0.8;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: #ff477e;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .heart:before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart:after {
+    top: 0;
+    left: -15px;
+  }
+  
+  .heart:nth-child(2) {
+    animation-delay: 1s;
+    left: 40%;
+  }
+  
+  .heart:nth-child(3) {
+    animation-delay: 2s;
+    left: 60%;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateX(-50%) rotate(45deg);
+      top: 100%;
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) rotate(45deg);
+      top: 0%;
+      opacity: 0;
+    }
+  }
+  
+  .forgive-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background: #ff47e1;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background 0.3s;
+  }
+  
+  .forgive-btn:hover {
+    transform: scale(1.1);
+    background: #ff76eb;
+  }
+  
+  .hidden {
+    display: none;
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  #response {
+    color: #ffff8d;
+  }
+  
